@@ -1,6 +1,6 @@
 %define name figlet
 %define version 222
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary: FIGlet is a program for making large letters out of ordinary text 
 Name: %{name}
