@@ -10,7 +10,6 @@ Source0: %{name}%{version}.tar.bz2
 License: Artistic
 Group: Toys
 Url: http://www.figlet.org/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 
 %description
 FIGlet is a program for making large letters out 
