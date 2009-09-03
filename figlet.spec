@@ -1,6 +1,6 @@
 %define name figlet
 %define version 222
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary: Program for making large letters out of ordinary text 
 Name: %{name}
