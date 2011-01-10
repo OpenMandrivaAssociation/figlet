@@ -18,6 +18,7 @@ Source5: international.tar.gz
 Patch1: 0001-Address-compiler-warnings.patch
 Patch2: 0002-Handle-memory-allocation-errors.patch
 Patch3: contributed-bdffonts-5x8.patch
+Patch4: figlet-shift-in-shift-out-fix.patch
 BuildRequires: zip
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
@@ -96,6 +97,7 @@ Utopia and fixed-width fonts.
 %patch2 -p1 -b .Handle-memory-allocation-errors
 tar xzf %{_sourcedir}/contributed.tar.gz
 %patch3 -p0 -b .contributed-bdffonts-5x8
+%patch4 -p0 -b .shift-in-shift-out-fix
 mv contributed/C64-fonts .
 mv contributed/bdffonts .
 tar xzf %{_sourcedir}/international.tar.gz
@@ -132,6 +134,9 @@ for i in *; do
   zip -m $i.zip $i
   mv $i.zip $i
 done)
+
+# Install Micah Cowan's replacement JIS X 0201 control file
+cp -f %{_sourcedir}/myjis.flc fonts/jis0201.flc
 
 %clean
 rm -rf %{buildroot}
