@@ -17,8 +17,10 @@ Source4: contributed.tar.gz
 Source5: international.tar.gz
 Patch1: 0001-Address-compiler-warnings.patch
 Patch2: 0002-Handle-memory-allocation-errors.patch
-Patch3: contributed-bdffonts-5x8.patch
-Patch4: figlet-shift-in-shift-out-fix.patch
+Patch3: 0003-Fix-memory-violation-when-smushing-at-line-start.patch
+Patch4: 0004-Relicense-zipio-files-under-the-MIT-license.patch
+Patch100: contributed-bdffonts-5x8.patch
+Patch101: figlet-shift-in-shift-out-fix.patch
 BuildRequires: zip
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
@@ -95,9 +97,11 @@ Utopia and fixed-width fonts.
 %setup -q -n %{name}%{vertag}
 %patch1 -p1 -b .Address-compiler-warnings
 %patch2 -p1 -b .Handle-memory-allocation-errors
+%patch3 -p1 -b .Fix-memory-violation-when-smushing-at-line-start
+%patch4 -p1 -b .Relicense-zipio-files-under-the-MIT-license
 tar xzf %{_sourcedir}/contributed.tar.gz
-%patch3 -p0 -b .contributed-bdffonts-5x8
-%patch4 -p0 -b .shift-in-shift-out-fix
+%patch100 -p0 -b .contributed-bdffonts-5x8
+%patch101 -p0 -b .shift-in-shift-out-fix
 mv contributed/C64-fonts .
 mv contributed/bdffonts .
 tar xzf %{_sourcedir}/international.tar.gz
