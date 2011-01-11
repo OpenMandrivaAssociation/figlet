@@ -147,7 +147,7 @@ rm -rf %{buildroot}
 
 %files -f fonts.list
 %defattr(0644,root,root,0755)
-%doc FAQ CHANGES LICENSE README
+%doc FAQ CHANGES LICENSE README figfont.txt
 %attr(755,-,-) %{_bindir}/figlet
 %attr(755,-,-) %{_bindir}/chkfont
 %attr(755,-,-) %{_bindir}/figlist
