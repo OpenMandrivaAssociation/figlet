@@ -37,25 +37,25 @@ screen characters
 characters in many different styles and can kern and "smush" these
 characters together in various ways.
 
-%package contributed
+%package fonts-contributed
 Summary: Contributed fonts for FIGlet
 Requires: %{name}
 Obsoletes: figlet-more-fonts <= 20110110
 Conflicts: figlet-more-fonts <= 20110110
 
-%description contributed
+%description fonts-contributed
 FIGlet is a program that creates large characters out of ordinary
 screen characters.
 
 This package contains many contributed fonts for figlet.
 
-%package international
+%package fonts-international
 Summary: International fonts for FIGlet
 Requires: %{name}
 Obsoletes: figlet-more-fonts <= 20110110
 Conflicts: figlet-more-fonts <= 20110110
 
-%description international
+%description fonts-international
 FIGlet is a program that creates large characters out of ordinary
 screen characters.
 
@@ -63,27 +63,27 @@ This package contains international fonts for figlet, including
 CJK fonts, Hebrew, Cyrillic, Greek, Cherokee, Futhark, Tengwar
 and Morse code.
 
-%package c64fonts
+%package fonts-c64
 Summary: Commodore 64 fonts for FIGlet
 Requires: %{name}
 Obsoletes: figlet-more-fonts <= 20110110
 Conflicts: figlet-more-fonts <= 20110110
 
-%description c64fonts
+%description fonts-c64
 FIGlet is a program that creates large characters out of ordinary
 screen characters.
 
 This package contains Commodore 64 fonts converted for FIGlet by
 by David Proper.
 
-%package bdffonts
+%package fonts-bdf
 Summary: X Window System fonts for FIGlet
 License: MIT
 Requires: %{name}
 Obsoletes: figlet-more-fonts <= 20110110
 Conflicts: figlet-more-fonts <= 20110110
 
-%description bdffonts
+%description fonts-bdf
 FIGlet is a program that creates large characters out of ordinary
 screen characters.
 
@@ -126,7 +126,7 @@ mkdir -p %{buildroot}%{_fontdir}/
 
 rm contributed/banner.flf
 (cd C64-fonts; for i in *.flf; do mv $i c64-$i; done)
-for i in fonts contributed international C64-fonts bdffonts; do
+for i in fonts contributed international bdffonts; do
   find $i -name "*.fl[cf]" | sed "s!.*/!%{_fontdir}/!" > $i.list
   find $i -name "*.fl[cf]" -exec cp {} %{buildroot}%{_fontdir}/ \;
 done
@@ -158,15 +158,15 @@ rm -rf %{buildroot}
 %{_mandir}/man6/showfigfonts.6*
 %dir %{_fontdir}
 
-%files contributed -f contributed.list
+%files fonts-contributed -f contributed.list
 %defattr(0644,root,root,0755)
 
-%files international -f international.list
+%files fonts-international -f international.list
 %defattr(0644,root,root,0755)
 
-%files c64fonts -f C64-fonts.list
-%defattr(0644,root,root,0755)
+#%files fonts-c64 -f C64-fonts.list
+#%defattr(0644,root,root,0755)
 
-%files bdffonts -f bdffonts.list
+%files fonts-bdf -f bdffonts.list
 %defattr(0644,root,root,0755)
 %doc bdffonts/bdffont1.txt bdffonts/bdf2flf.pl
