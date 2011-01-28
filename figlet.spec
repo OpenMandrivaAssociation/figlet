@@ -2,14 +2,13 @@
 
 Name: figlet
 Epoch: 1
-Version: 2.2.3
-Release: %mkrel 2
+Version: 2.2.4
+Release: %mkrel 1
 Summary: A program for making large letters out of ordinary text
 URL: http://www.figlet.org/
 Group: Toys
 License: BSD
 Source: ftp://ftp.figlet.org/pub/figlet/program/unix/%{name}-%{version}.tar.gz
-Patch1: fix-rendering-corruption-on-multiline-smushing.patch
 BuildRequires: zip
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
@@ -28,7 +27,6 @@ characters together in various ways.
 
 %prep
 %setup -q
-%patch1 -p1
 
 %build
 %make \
@@ -53,6 +51,7 @@ make install \
   MANDIR=%{_mandir} \
   DEFAULTFONTDIR=%{_fontdir} \
   DESTDIR=%{buildroot}
+./run-tests.sh %{buildroot}%{_fontdir}
 
 %clean
 rm -rf %{buildroot}
