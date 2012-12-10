@@ -69,3 +69,84 @@ rm -rf %{buildroot}
 %{_mandir}/man6/showfigfonts.6*
 %dir %{_fontdir}
 %{_fontdir}/*.fl[fc]
+
+
+%changelog
+* Sun Feb 27 2011 Funda Wang <fwang@mandriva.org> 1:2.2.4-2mdv2011.0
++ Revision: 640432
+- rebuild to obsolete old packages
+
+* Fri Jan 28 2011 Claudio Matsuoka <claudio@mandriva.com> 1:2.2.4-1
++ Revision: 633686
+- new upstream release
+  * add support for tlf2 fonts
+  * fix smushing corruption bug
+
+* Mon Jan 24 2011 Claudio Matsuoka <claudio@mandriva.com> 1:2.2.3-2
++ Revision: 632479
+- add upstream patch to fix rendering corruption on multiline smushing
+
+* Thu Jan 13 2011 Claudio Matsuoka <claudio@mandriva.com> 1:2.2.3-1
++ Revision: 631016
+- new upstream version 2.2.3
+  * license changed to BSD
+  * zipio license changed to MIT
+  * fixes for JIS0201
+  * fix for memory allocation errors and access violations
+- Fix memory violation when smushing at line start
+- Relicense zipio files under the MIT license
+- fix handling of JIS X 0201 characters (by Micah Cowan)
+- refactor FIGlet package
+  * layout change: include fonts as subpackages, obsolete figlet-more-fonts
+  * better package descriptions
+  * use upstream version numbering system
+- fix memory allocation error handling
+- fix 5x8 fixed font size
+- add utility manpages written by Jonathon Abbott for Debian
+- use compressed fonts to save storage space
+- imported package figlet
+
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 222-9mdv2011.0
++ Revision: 618282
+- the mass rebuild of 2010.0 packages
+
+* Thu Sep 03 2009 Thierry Vignaud <tv@mandriva.org> 222-8mdv2010.0
++ Revision: 428729
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 222-7mdv2009.0
++ Revision: 245133
+- rebuild
+
+* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 222-5mdv2008.1
++ Revision: 170829
+- rebuild
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Tue Aug 21 2007 Olivier Thauvin <nanardon@mandriva.org> 222-4mdv2008.0
++ Revision: 68487
+- rebuild
+
+
+* Sun Aug 06 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/06/06 11:20:43 (53392)
+- rebuild
+
+* Sun Aug 06 2006 Olivier Thauvin <nanardon@mandriva.org>
++ 08/06/06 11:14:40 (53391)
+Import figlet
+
+* Tue Jul 26 2005 Olivier Thauvin <nanardon@mandriva.org> 222-2mdk
+- update url
+
+* Tue Jul 26 2005 Olivier Thauvin <nanardon@mandriva.org> 222-1mdk
+- 222
+
+* Mon Jun 14 2004 Olivier Thauvin <thauvin@aerov.jussieu.fr> 221-2mdk
+- birthday rebuild
+- split font into figlet-more-fonts
+
