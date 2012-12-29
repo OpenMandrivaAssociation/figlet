@@ -1,2 +1,4 @@
+removed_sources:
+  figlet-2.2.4.tar.gz: 365f1fce8525c0ff23631661f96534f06822e423
 sources:
-  "figlet-2.2.4.tar.gz": 365f1fce8525c0ff23631661f96534f06822e423
+  figlet-2.2.5.tar.gz: dda696958c161bd71d6590152c94c4f705415727

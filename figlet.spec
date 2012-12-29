@@ -2,13 +2,13 @@
 
 Name: figlet
 Epoch: 1
-Version: 2.2.4
-Release: %mkrel 2
+Version: 2.2.5
+Release: 1
 Summary: A program for making large letters out of ordinary text
 URL: http://www.figlet.org/
 Group: Toys
 License: BSD
-Source: ftp://ftp.figlet.org/pub/figlet/program/unix/%{name}-%{version}.tar.gz
+Source: ftp://ftp.figlet.org:21/pub/figlet/program/unix/%{name}-%{version}.tar.gz
 BuildRequires: zip
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
@@ -149,4 +149,5 @@ Import figlet
 * Mon Jun 14 2004 Olivier Thauvin <thauvin@aerov.jussieu.fr> 221-2mdk
 - birthday rebuild
 - split font into figlet-more-fonts
+
 
