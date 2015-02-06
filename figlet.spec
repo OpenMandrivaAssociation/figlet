@@ -3,7 +3,7 @@
 Name: figlet
 Epoch: 1
 Version: 2.2.5
-Release: 1
+Release: 2
 Summary: A program for making large letters out of ordinary text
 URL: http://www.figlet.org/
 Group: Toys
