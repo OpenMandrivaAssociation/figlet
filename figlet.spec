@@ -5,7 +5,7 @@ Epoch: 1
 Version: 2.2.5
 Release: 2
 Summary: A program for making large letters out of ordinary text
-URL: http://www.figlet.org/
+URL: https://www.figlet.org/
 Group: Toys
 License: BSD
 Source: ftp://ftp.figlet.org:21/pub/figlet/program/unix/%{name}-%{version}.tar.gz
