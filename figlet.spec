@@ -9,6 +9,7 @@ URL: https://www.figlet.org/
 Group: Toys
 License: BSD
 Source: ftp://ftp.figlet.org:21/pub/figlet/program/unix/%{name}-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires: zip
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
